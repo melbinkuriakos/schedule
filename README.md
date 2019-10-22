@@ -1,5 +1,16 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# About Scheduler App
+
+Scheduler is an app for showing the match details
+
+## Installation
+
+1) Pull the branch from https://github.com/melbinkuriakos/schedule.git
+2) npm install
+3) npm start
+4) Run on port 3000. (eg http://localhost:3001/)
+
 ## Available Scripts
 
 In the project directory, you can run:
