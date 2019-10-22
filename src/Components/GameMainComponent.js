@@ -77,7 +77,7 @@ class GameMainComponent extends React.Component {
 
                     <section className="">
                         <div className="f7 bb bw1 b--black-10 flex justify-between">
-                            <a className={`dib link pa2 ${type === 'Upcoming' ? 'b bb bw2 b--light-red' : ''}`} onClick={()=>this.setParameterAndLoad('type', 'upcoming')}>All</a>
+                            <a className={`dib link pa2 ${type === 'All' ? 'b bb bw2 b--light-red' : ''}`} onClick={()=>this.setParameterAndLoad('type', 'All')}>All</a>
                             <a className={`dib link pa2 ${type === 'International' ? 'b bb bw2 b--light-red' : ''}`} onClick={()=>this.setParameterAndLoad('type', 'International')}>International</a>
                             <a className={`dib link pa2 ${type === 'Domestic' ? 'b bb bw2 b--light-red' : ''}`} onClick={()=>this.setParameterAndLoad('type', 'Domestic')}>Domestic</a>
                         </div>
