@@ -10,6 +10,10 @@
     background-image: linear-gradient(to right, #fff, #e0e0e0, #fff);
 }
 
+.text-danger {
+    color:#ef724d;
+}
+
 .time-remaining-box-container{
     width:65%;
     background-color: #F9E2D2;

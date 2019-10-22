@@ -45,16 +45,14 @@ class GameMainComponent extends React.Component {
 
     setParameterAndLoad = (paramName, status) => {
         if(paramName === 'type'){
-            this.setState({type: status})
+            this.setState({type: status}, this.loadData)
         }
         if(paramName === 'status'){
-            this.setState({status: status})
+            this.setState({status: status}, this.loadData)
         }
         if(paramName === 'page'){
-            this.setState({page: status})
+            this.setState({page: status}, this.loadData)
         }
-
-        this.loadData();
     };
 
     componentDidMount() {
@@ -70,9 +68,15 @@ class GameMainComponent extends React.Component {
                 <h2>Schedule</h2>
                 <div className="bg-white pt4 mb3">
                     <section className="flex justify-center">
-                        <button className="f7 black-60 bg-near-white link dim ba ph3 pv2 mb2 dib b--black-20 br-3" onClick={()=>this.setParameterAndLoad('status', 'upcoming')}>Upcoming</button>
-                        <button className="f7 black-60 bg-near-white link dim bt bb ph3 pv2 mb2 dib b--black-20 br-3" onClick={()=>this.setParameterAndLoad('status', 'live')}>Running</button>
-                        <button className="f7 black-60 bg-near-white link dim ba ph3 pv2 mb2 dib b--black-20 br-3" onClick={()=>this.setParameterAndLoad('status', 'completed')}>Completed</button>
+                        <button className="f7 black-60 bg-near-white link dim ba ph3 pv2 mb2 dib b--black-20 br-3" onClick={()=>this.setParameterAndLoad('status', 'upcoming')}>
+                           <span className={status === 'upcoming' ? 'text-danger' : ''}>Upcoming</span>
+                        </button>
+                        <button className="f7 black-60 bg-near-white link dim bt bb ph3 pv2 mb2 dib b--black-20 br-3" onClick={()=>this.setParameterAndLoad('status', 'live')}>
+                             <span className={status === 'live' ? 'text-danger' : ''}>Running</span>
+                        </button>
+                        <button className="f7 black-60 bg-near-white link dim ba ph3 pv2 mb2 dib b--black-20 br-3" onClick={()=>this.setParameterAndLoad('status', 'completed')}>
+                            <span className={status === 'completed' ? 'text-danger' : ''}>Completed</span>
+                        </button>
                     </section>
 
                     <section className="">
