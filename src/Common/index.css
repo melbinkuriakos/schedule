@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+.background {
+    background-color: #e0e0e0;
+    padding:20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.gray-gradient{
+    background-image: linear-gradient(to right, #fff, #e0e0e0, #fff);
+}
+
+.time-remaining-box-container{
+    width:65%;
+    background-color: #F9E2D2;
+    height:20px;
+    font-size: small;
+    border-radius: 15px;
+}
